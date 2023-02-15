@@ -1,0 +1,934 @@
+
+
+li.navEle{
+display: inline-block;
+}
+
+li.hidNavEle{
+
+
+background-color:#12333f;
+padding: 0px;
+width: 100%;
+}
+
+button.navcom{
+
+background-color: #343434;
+outline: none;
+border-width:  0px;
+color:#42abc5;
+padding: 10px;
+margin-left: 7px;
+left:7px;
+z-index: inherit;
+}
+
+on.navcomhid{
+
+background-color: #12333f;
+outline: none;
+border:  0px;
+color:#fbfbfb;
+padding: 10px;
+padding-left:10px;
+margin-left:0px;
+left:0px;
+text-align: left;
+width: 100%;
+z-index: inherit;
+transition: 0.3s ease;
+}
+
+button.navcomhid:focus{
+
+color:#fcfcfc;
+background-color:#42abc5;
+}
+
+button.navcomhid:hover{
+
+color:#fcfcfc;
+background-color:#42abc5;
+transition: background-color 0.6s ease;
+font-size: 15px;
+}
+
+
+button.navcom:hover{
+
+color:#fbfbfb;
+
+}
+
+
+button.menu{
+
+background-color: #343434;
+outline: none;
+display:none;
+color:#43abcf;
+
+
+padding: 5px;
+padding-left: 10px;
+padding-right: 10px;
+align-items:center;
+
+left: 0px;
+margin-left: 0px;
+margin: 7px;
+
+font-size: 17px;
+
+z-index: inherit;
+
+
+border-width:1.3px;
+border-style:solid; 
+border-color:#43abcf;
+border-radius:11px;
+
+transition: 0.2s ease;
+
+}
+
+
+button.menu:hover{
+
+border-color:#fbfbfb;
+color:#fcfcfc;
+border-width: 1.9;
+
+}
+
+
+
+
+
+
+
+button.search{
+
+outline:none;
+border-radius: 9px;
+
+border-width: 1.19px;
+padding: 4px;
+padding-left: 8px;
+padding-right: 8px;
+background-color:#343434;
+color:#43abcf;
+vertical-align: middle;
+border-color:#43abcf;
+margin-left: 7px;
+border-style: solid;
+font-family: "Segoe UI";
+font-weight: 160;
+text-align: center;
+z-index: inherit;
+
+}
+
+
+.item{
+user-select: none;
+font-family:"Consolas";
+border-radius: 0 3px 3px 0;
+cursor: pointer;
+margin: 3px;
+transition: 0.6s ease;
+
+}
+
+
+
+button.search:hover{
+
+border-color:#fbfbfb;
+color:#fcfcfc;
+
+}
+
+title.nav{
+
+
+font-family: "Consolas 13";
+
+}
+
+/* Region - Starting from now is a New Widget That We Will Call Page, its class Being a 
+New Kinda Page */
+
+.page{
+
+position : fixed;
+z-index: 6;
+left: 0 ;
+top: 0 ;
+width: 100%;
+height:100%;
+overflow: scroll;
+background-color:rgb(0,0,0); /*In case the later one doesn't work on webkit sites...*/
+background-color: rgba(0,0,0,0.8);
+visibility: hidden;
+opacity: 0;
+transition: visibility 0.6s ease, opacity 0.6s ease;
+}
+
+
+.content{
+
+background-color: #fbfbfb;
+color: #3d3d3d;
+padding: 20px;
+margin: 5%;
+width: 90%;
+vertical-align: middle;
+border-style: solid;
+border-width: 2px;
+border-radius: 9px;
+border-color: #d3d3d3;
+
+}
+
+.pager{
+
+font-family: "Segoe UI";
+color:#3d3d3d;
+font-weight: 200;
+margin: 15;
+text-align: middle;
+
+}
+
+.close{transition: 0.5s ease;position: fixed;position: -webkit-sticky;
+
+padding: 4px;
+padding-left:8px;
+padding-right: 8px;
+cursor: pointer;
+border-radius: 48%;
+background-color:rgba( 220 , 220 , 220, 0.6);}
+
+.close:hover
+{
+
+cursor: pointer;
+border-radius: 48%;
+background-color: rgba( 130 , 130 , 130, 0.6);
+
+}
+
+
+/*endregion*/
+
+
+
+/*These are for the default buttons*/
+.def{
+outline:none;
+border-style: solid;
+border-width: 1.4px;
+padding: 4px;
+padding-left: 8px;
+padding-right: 8px;
+background-color:#353535;
+color:#3d3d3d;
+vertical-align: middle;
+border-color:#3d3d3d;
+margin-left: 7px;
+font-family: "Segoe UI";
+font-weight: 190;
+text-align: center;
+border-radius:9px;
+display: inline-block;
+
+}
+
+.default-light{
+outline:none;
+border-style: solid;
+border-width: 0px;
+padding: 4px;
+padding-left: 8px;
+padding-right: 8px;
+background-color:#eee;
+color:#808080;
+vertical-align: middle;
+transition: 0.1s;
+margin-left: 7px;
+font-family: "Segoe UI";
+font-weight: 190;
+text-align: center;
+border-radius:9px;
+box-shadow: 1px 1px 2px 1px rgba(190, 190, 190, 30)  ;
+
+
+
+}
+
+
+.default-light:hover{
+
+background-color: #d3d3d3;
+border-width: 2.1px;
+border-color: #57a0d3; 
+
+}
+
+	.default-light:focus{
+
+border-color: #57a0d3; 
+
+}
+
+
+.default-dark{
+outline:none;
+border-style: solid;
+border-width: 0px;
+padding: 4px;
+padding-left: 8px;
+padding-right: 8px;
+background-color:#343534;
+color:#42abcf;
+vertical-align: middle;
+transition: 0.1s;
+margin-left: 7px;
+font-family: "Segoe UI";
+font-weight: 190;
+text-align: center;
+border-radius:9px;
+box-shadow: 1px 1px 2px 1px rgba(190, 190, 190, 30)  ;
+
+
+
+}
+
+
+.default-dark:hover{
+
+background-color: #313335;
+border-width: 2.1px;
+border-color: #57a0d3; 
+
+}
+
+ .default-dark:focus{
+
+border-color: #57a0d3; 
+
+}
+
+
+/*Where main thing*/
+
+
+
+.blue{
+	outline:none;
+	border-style: solid;
+	border-width: 0px;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color:#57a0d3;
+	color:#fff;
+	vertical-align: middle;
+	transition: 0.1s;
+	margin-left: 7px;
+	font-family: "Segoe UI";
+	font-weight: 190;
+	text-align: center;
+	border-radius:9px;
+	box-shadow: 1px 1px 2px 1px rgba(190, 190, 190, 30)  ;
+
+
+
+	
+	}
+	
+	
+	.blue:hover{
+	
+	background-color: #0079fe;
+	/*border-width: 2px;*/
+	border-color: #d6daeb; 
+	
+	}
+	
+	 .blue:focus{
+	
+	border-color: #c4d; 
+	
+	}
+	
+.violet{
+	outline:none;
+	border-style: solid;
+	border-width: 0px;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color:#c4f;
+	color:#fff;
+	vertical-align: middle;
+	transition: 0.1s;
+	margin-left: 7px;
+	font-family: "Segoe UI";
+	font-weight: 190;
+	text-align: center;
+	border-radius:9px;
+	box-shadow: 1px 1px 2px 1px rgba(190, 190, 190, 30)  ;
+
+
+	
+	}
+	
+	
+	.violet:hover{
+	
+	background-color: #c4a;
+	/*border-width: 2px;*/
+	border-color: #d6daeb; 
+	
+	}
+	
+		.violet:focus{
+	
+	border-color: #c4a; 
+	
+	}
+	
+
+
+
+.trans{
+	outline:none;
+	border-style: solid;
+	border-width: 0px;
+	padding:0px;
+	padding-right: 8px;
+	background-color:transparent;
+	color:#a2a2a2;
+	vertical-align: middle;
+	transition: 0.1s;
+	margin-left: 7px;
+	font-family: "Segoe UI";
+	font-weight: 190;
+	text-align: center;
+	border-radius:9px;
+    /* box-shadow: 2px 1px 2px 3px rgba(190, 190, 190, 60)  ; */
+  
+	
+	}
+
+
+	
+	
+	.trans:hover{
+	
+	background-color: #d3d3d3;
+	/*border-width: 2px;*/
+	border-color: #57a0d3; 
+	
+	}
+	
+	 .trans:focus{
+	
+	border-color: transparent; 
+	background-color:transparent;
+	
+	}
+	
+
+
+
+.themed{
+	outline:none;
+	border-style: solid;
+	border-width: 0px;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color:#ffab91;
+	color:#fff;
+	vertical-align: middle;
+	transition: 0.1s;
+	margin-left: 7px;
+	font-family: "Segoe UI";
+	font-weight: 190;
+	text-align: center;
+	border-radius:9px;
+    box-shadow: 1px 1px 2px 1px rgba(190, 190, 190, 30)  ;
+	
+	}
+	
+	
+	.themed:hover{
+	
+	background-color: #b26c56;
+	/*border-width: 2px;*/
+	border-color: #57a0d3; 
+	
+	}
+	
+	 .themed:focus{
+	
+	border-color: #57a0d3; 
+	
+	}
+	
+
+	:root{
+		--primary: #1c1f31;
+		--secondary: #131729;
+		--title: #fff;
+	  }
+	  
+	  /* layout styles */
+	  nav{
+		background:  linear-gradient(to top, var(--secondary), var(--primary) ) ;
+		background-blend-mode: screen;
+		padding-bottom: 10px;
+	  }
+	  nav a{
+		text-transform: uppercase;
+		color: var(--title);
+	  }
+	  nav a span{
+		font-weight: bold;
+	  }
+	  nav .sidenav-trigger{
+		margin: 0;
+	  }
+	  
+	  /* recipe styles */
+	  .recipes{
+		margin-top: 20px;
+	  }
+	  .card-panel.recipe{
+		border-radius: 8px;
+		padding: 10px;
+		box-shadow: 0px 1px 3px rgba(90,90,90,0.1);
+		display: grid;
+		grid-template-columns: 2fr 6fr 1fr;
+		grid-template-areas: "image details delete";
+		position: relative;
+	  }
+	  .recipe img{
+		grid-area: image;
+		max-width: 60px;
+	  }
+	  .recipe-details{
+		grid-area: details;
+		margin-top: 6px;
+	  }
+	  .recipe-delete{
+		grid-area: delete;
+		position: absolute;
+		bottom: 0px;
+		right: 0px;
+	  }
+	  .recipe-delete i{
+		font-size: 18px;
+	  }
+	  .recipe-title{
+		font-weight: bold;
+	  }
+	  .recipe-ingredients{
+		font-size: 0.8em;
+	  }
+	  
+	  /* form-styles */
+	  .add-btn{
+		background: var(--primary) !important;
+	  }
+	  input{
+		box-shadow: none !important;
+		-webkit-box-shadow: none !important;
+	  }
+
+	  form .input-field-101{
+		border-width: 1em;
+		border-radius: 11px;
+		background-color: #eee;
+		border-color: #a4a4a4;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-right: 10px;
+
+	  }
+
+	  input.PPTX {
+		border-width: 1em;
+		border-radius: 11px;
+		background-color: #eee;
+		border-color: #a4a4a4;
+		margin-top: 10;
+		margin-bottom: 10; 
+		margin-right: 10px;
+
+	  }
+
+	  .side-form button{
+	    border-radius: 7px;
+		background: var(--primary);
+		box-shadow: 1px 1px 3px rgba(90,90,90,0.2);
+	  }
+	  form .input-field{
+		margin-top: 30px;
+	  }
+	  
+
+
+
+.green{
+	outline:none;
+	border-style: solid;
+	border-width: 0px;
+	padding: 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	background-color:#73939f;
+	color:#fff;
+	vertical-align: middle;
+	transition: 0.1s;
+	margin-left: 7px;
+	font-family: "Segoe UI";
+	font-weight: 190;
+	text-align: center;
+	border-radius:9px;
+    box-shadow: 2px 1px 2px 3px rgba(190, 190, 190, 60)  ;
+
+	
+	}
+	
+	
+	.green:hover{
+	
+	background-color: #223443;
+	/*border-width: 2px;*/
+	border-color: #57a0d3; 
+	
+	}
+	
+	 .green:focus{
+	
+	border-color: #57a0d3; 
+	
+	}
+	
+
+
+.ele{
+
+outline:none;
+border-width: 0px;
+background: inherit;
+color: #43abc5;
+height: 100%;
+min-height: 48px;
+z-index: inherit;
+position: relative;
+width:32%;
+margin: 0px;
+margin-left: 0;
+margin-right: 0;
+padding: 0;
+right:0;
+left:0;
+
+}
+
+.ele:hover{
+    transition: 0.2s;
+	background: #3d3d3d;
+	color:#fffffb;
+}
+
+.ele:focus{
+    transition: 0.2s;
+	background: #fefefe;
+	color:#3d3d3d;
+}
+
+
+.fadest{
+
+opacity: 80%;
+background-color: #efefef;
+border-style: solid;
+border-width:0.3px;
+width:100%;
+
+
+}
+
+.opace{
+
+
+opacity: 20%;
+background-color: #000000;
+border-style: solid;
+border-width:0.3px;
+width:98%;
+height: 0.2px;
+
+
+
+}
+
+.title{
+
+font-family: "Segoe UI";
+font-style:bold;
+font-weight: 700;
+font-size: 23px;
+
+}
+
+
+.image{
+
+display: inline-block;
+margin: 10px;
+
+
+}
+
+.prophoto{
+
+border-radius: 4%;
+border-style: solid;
+border-width: 1.5px;
+width:25%;
+border-color:#d3d3d3;
+vertical-align: middle;
+display: inline-block;
+z-index: 1;
+
+}
+
+.Osa{
+transition: 0.6s ease;
+
+}
+
+
+.Osablck{
+
+transition: 0.6s ease;
+padding:10px;
+background-color: #fbfbfb;
+border-radius:10px;
+color: #808080;
+text-align: left;
+width:190px;
+margin:10px;
+font-size:12px;
+}
+
+.Osa2:hover{
+
+
+background-color: #3d3d3d;
+color: #fbfbfb;
+border-radius: 14px;
+
+}
+
+
+p.Osa2{
+
+transition: 0.6s ease;
+padding:10px;
+background-color: #d3d3d3;
+border-radius:10px;
+text-align: justify-all;
+width:60%;
+margin:10px;
+
+}
+
+
+p.Osa2:hover{
+
+
+background-color: #3d3d3d;
+color: #fbfbfb;
+border-radius: 14px;
+
+}
+
+.holder{
+
+	max-width:30%;
+}
+
+
+@media screen and (max-width: 800px)
+{
+
+/*----*/
+button.menu{
+	display: block; 
+	position: relative;
+}
+
+.Osa{
+	width:90%;
+	font-size: 13px;
+	
+	
+	text-align: justify-all;
+    transition: 0.6s ease;
+}
+
+
+
+.Osablck{
+    transition: 0.6s ease;
+	padding: 10px;
+	border-radius: 18px;
+	font-size: 13px;
+	display: table-cell;
+	width: 70%;
+}
+
+.holder{
+    display: inline-block;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	max-width: 80%;
+}
+
+p.Osa2{
+    transition: 0.6s ease;
+	padding:10px;
+	border-radius: 18px;
+	font-size: 13px;
+	display: table-cell;
+	width: 77%;
+}
+
+.image{
+
+	width:100%;
+	display: inline-block;
+	text-align: center;
+}
+
+
+.prophoto{
+   
+	width:80%;
+	
+}
+
+.def{
+
+display: inline-block;
+align-items: center;
+align-content: center;
+
+}
+
+.v{
+
+width:30%;
+
+}
+
+
+}
+
+/*________*/
+
+@media screen and (min-width: 1090px)
+{
+
+
+
+
+.Osa{
+	font-size: 20px;
+	display: table-cell;
+	width: 77%;
+}
+
+body{
+
+	font-size: 21px;
+}
+
+.Osa2{
+	font-size: 20px;
+	display: table-cell;
+	width: 60%;
+}
+
+
+
+}
+
+
+
+
+@media screen and (min-width: 1290px)
+{
+
+
+
+
+.default{
+
+	font-size:19px;
+}
+
+
+.Osa2{
+	font-size: 27px;
+	display: table-cell;
+	width: 70%;
+}
+
+
+
+
+}
+
+
+
+.Card{
+
+border-radius: 13px;
+background-color: #3fa9c3;
+padding:10px;
+display:inline-block;
+margin:10px;
+left:0px;
+width:25%;
+background: linear-gradient(to left,#43abc5,#008b8b);
+background-blend-mode: screen;
+}
+
+@media screen and (max-width: 800px){
+
+
+.Card{
+
+ 
+width:90%;
+
+}
+
+
+.Osablck{
+
+	width: 60%;
+}
+
+
+}
