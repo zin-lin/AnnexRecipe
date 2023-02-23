@@ -22,7 +22,7 @@ db.collection("recipe").onSnapshot((sn)=>{
 
       if (ch.type === "added"){
           //add the document data to index.html
-        
+          console.log(ch.doc.data());
           renderRecipe(ch.doc.data(), ch.doc.id)
       }
 
@@ -31,15 +31,11 @@ db.collection("recipe").onSnapshot((sn)=>{
 
           removeRecipe(ch.doc.id);
       }
-
-
   });
-
 }); 
 
 
 //Add New Document
-
 const form = document.querySelector("form");
 form.addEventListener("submit", evt=>{
     evt.preventDefault();
@@ -50,7 +46,7 @@ form.addEventListener("submit", evt=>{
         ingredient: form.ingredients.value,
     };
 
-    db.collection("recipe").add(recipe).then(()=>{console.log("Added")}).catch(err => console.log(err, "is fucking you !!! !!!"));
+    db.collection("recipe").add(recipe).then(()=>{console.log("Added")}).catch(err => console.log(err));
     form.title.value = "";
     form.ingredients.value="";
 

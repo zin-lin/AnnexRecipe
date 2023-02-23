@@ -1,4 +1,4 @@
-
+// Author : Zin Lin Htun
 
 const staticCacheName = "site-static-v9";
 const dynamicCacheName = "dynamic-v6";
@@ -46,7 +46,7 @@ const limitCacheSize = (name, size)=>{
 
             }}
         ));
-        console.log("shitted");
+        console.log("problem");
 
 }
 
