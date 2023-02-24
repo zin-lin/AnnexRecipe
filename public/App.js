@@ -1,5 +1,5 @@
-//Check Service Worker Is Support
-
+// //Check Service Worker Is Support
+//
 // if("serviceWorker" in navigator){
 //     //navigator is the whole app's frame in JS
 //     //Check whether sws are supported

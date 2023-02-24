@@ -63,7 +63,14 @@
 </head>
 
 <body class= "grey lighten-4" 
-style="background-position:center;">
+style="background-position:center; padding-top: 0px" >
+    <div class="alert" id = "box1">
+        <div class="alertbox">
+            <p class="aTitle"> A Recipe Does Need a Title 😉</p>
+            <p class="aText">Opps! A recipe can only be added to the database if a title exists</p>
+            <button class="grayx"  id="alert1">Ok, Got it !</button>
+        </div>
+    </div>
 
     <!--Top NavBar-->
     <nav>
@@ -99,6 +106,30 @@ style="background-position:center;">
         <li><a href="./pages/contact.html" class="waves-effect">
           <i class="material-icons">mail_outline</i>Contact</a>
         </li>
+        <li>
+            <div style="padding: 20px">
+            <hr/>
+
+            <button class="greenx shGreen" style="margin: 5px">
+                Vegetarian
+            </button>
+            <button class="greenX shGreen" style="margin: 5px">
+                Vegan
+            </button>
+            <br/>
+            <button class="bluex shBlue" style="margin: 5px">
+                Starter
+            </button>
+            <button class="themex shTheme" style="margin: 5px">
+                Deserts
+            </button>
+            <br/>
+
+            <button class="orangex shOrange" style="margin: 5px">
+                Mains
+            </button>
+            </div>
+        </li>
     </ul>
       
 
@@ -107,14 +138,14 @@ style="background-position:center;">
           <p style="align-items: center;"><b style="color: #777">Add New Recipe </b></p>
 
           <div style="text-align: center;">
-              <form class="add-recipe container section">
+              <form class="add-recipe container section" id="form">
                   <br/>
 
-                  <button class="blackx" disabled>Title</button>
+                  <button class="blackx" disabled style="align-self: flex-start">Title</button>
                   <input placeholder="Lamb Soup" id="title" type="text" class="validate noner"/>
                   <br/>
 
-                  <button class="blackx" disabled>About recipe</button>
+                  <button class="blackx" disabled style="align-self: flex-start">About recipe</button>
                   <input placeholder="A Spicy Indian cousine" id="ingredients" type="text"
                          class="validate noner"/>
 
@@ -128,8 +159,17 @@ style="background-position:center;">
         </div>
         
         <div class="panelList" >
+            <div style="width: 100%; text-align: center" >
 
+                <img class="cardMain"
+                     style="margin: auto"
+                     src="/AnnexRecipe/public/img/beef.png" draggable="true" >
+
+                </img>
+
+            </div>
             <div class="recipes container" >
+
             </div>
 
         </div>
@@ -139,7 +179,7 @@ style="background-position:center;">
           <br>
             <button class="blackx "><a href="./pages/about.html">Annex Recipes</a></button>
           <hr/>
-          <button class="blackx ">Search Anything ...</button>
+          <button class="blackx ">🔎︎ Search Anything ...</button>
 
           <hr/>
           <button class="blackx ">
@@ -165,54 +205,79 @@ style="background-position:center;">
           </button>
             <hr/>
 
-            <button class="grayx" style="margin: 5px">
-                Vegetarian
+            <button class="greenx shGreen" style="margin: 5px">
+                Vegetarian 🥦
             </button>
-            <button class="grayx" style="margin: 5px">
-                Vegan
+            <button class="greenX shGreen" style="margin: 5px">
+                Vegan 🥬
             </button>
             <br/>
-            <button class="grayx" style="margin: 5px">
-                Starter
+            <button class="bluex shBlue" style="margin: 5px">
+                Starter 🍞
             </button>
-            <button class="grayx" style="margin: 5px">
-                Deserts
+            <button class="themex shTheme" style="margin: 5px">
+                Deserts 🍰
             </button>
             <br/>
 
-            <button class="grayx" style="margin: 5px">
-                Mains
+            <button class="orangex shOrange" style="margin: 5px">
+                Mains 🍽️
             </button>
           
-        </div> 
-     
+        </div>
+
+        <div class="mobile-nav">
+            <div style="display: flex; margin-top: 15px">
+                <button class="mobile-nav-item4">
+                    <a class="material-icons" href="./index.html" style="color: #2070ee;
+                    font-size: 35px;
+                    ">
+                        home
+                    </a>
+                </button>
+                <button class="mobile-nav-item4">
+                    <a class="material-icons" href="./pages/about.html">
+                        search
+                    </a>
+                </button>
+                <button class="mobile-nav-item4">
+                    <a class="material-icons"  href="./pages/contact.html">
+                        mail
+                    </a>
+                </button>
+                <button class="mobile-nav-item4">
+                    <a class="material-icons"  href="./pages/about.html">
+                        info
+                    </a>
+                </button>
+            </div>
+        </div>
     </article>
 
 
   <!-- add recipe side nav -->
-  <div id="side-form" class="sidenav side-form">
-    <form class="add-recipe container section" style="cursor: pointer;">
-      <h3 foreground="#ffab91">New Recipe</h3>
-      <div class="divider"></div>
-      <div class="input-field">
-        <input placeholder="e.g. Chicken Barittoes" id="title"
-         type="text" class="validate"
-       >
-        <label for="title">Recipe Title</label>
-      </div>
-      <div class="input-field">
-        <input placeholder="e.g. Tomato, Powder, garlic" id="ingredients" type="text"
-               class="validate">
-        <label for="ingredients">Ingredients</label>
-      </div>
-      <div class="input-field center">
-        <button class="btn-small" type="submit" >Add</button>
-      </div>
-    </form>
-  </div>
- 
+    <div id="side-form" class="sidenav side-form">
+        <form class="formx add-recipe container section" style="cursor: pointer;" id="sideone">
+            <p class="aTitle" foreground="#ffab91">New Recipe</p>
+            <div class="divider"></div>
+            <div class="input-field">
+                <input placeholder="e.g. Chicken Barittoes" id="titleSide"
+                       type="text" class="validate">
+                <label for="titleSide">Recipe Title</label>
+            </div>
+            <div class="input-field">
+                <input placeholder="e.g. Tomato, Powder, garlic" id="ingredientsSide"
+                       type="text" class="validate">
+                <label for="ingredientsSide">Ingredients</label>
+            </div>
+            <div class="input-field center">
+                <button class="grayx" type="submit" >Add</button>
+            </div>
+        </form>
+    </div>
 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
 <!-- These SDK files are written by Google Firebase team-->
 <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
@@ -240,9 +305,10 @@ style="background-position:center;">
     const db = firebase.firestore();
     //CRUD 
 
-  </script> <script src="./App.js"></script>
-
+  </script>
+  <script src="./App.js"></script>
   <script src="./js/ui.js"></script>
+  <script src="./js/controllers.js.js"></script>
   <script src="./js/db.js"></script>
 
 </body>

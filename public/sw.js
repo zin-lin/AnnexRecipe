@@ -7,13 +7,14 @@ const dynamicCacheName = "dynamic-v6";
 const asset = [
     "./", // User ask without the display start up just on server
     "./index.html",
-    "./js/App.js",
+    "./App.js",
     "./js/materialize.min.js",
     "./js/ui.js",
     "./pages/fallback.html",
     "./css/materialize.min.css",
     "./css/minorwidgets.css",
     "./img/dish.png",
+    "./img/beef.png",
     "https://fonts.googleapis.com/icon?family=Material+Icons",
     "https://fonts.gstatic.com/s/materialicons/v67/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2",
 

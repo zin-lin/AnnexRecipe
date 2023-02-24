@@ -57,7 +57,6 @@
           <span class= "right grey-text text-darken-1 hider">
             <i class ="material-icons sidenav-trigger" data-target="side-menu" style="color:#fff; cursor:pointer;" >menu</i>
         </span>
-
       </div>
   </nav>
 
@@ -82,32 +81,35 @@
       <div class="panel-left" style="align-content: center; align-items:center; text-align:center">
           <p style="align-items: center;"><b style="color: #777">Add New Recipe </b></p>
           <div style="text-align: center;">
-              <br/>
+              <form class="add-recipe container section" id="form">
+                  <br/>
 
-              <button class="blackx" disabled>Title</button>
-              <input placeholder="Lamb Soup" id="ingredients" type="text" class="validate noner"/>
-              <br/>
+                  <button class="blackx" disabled style="align-self: flex-start">Title</button>
+                  <input placeholder="Lamb Soup" id="title" type="text" class="validate noner"/>
+                  <br/>
 
-              <button class="blackx" disabled>About recipe</button>
-              <input placeholder="A Spicy Indian cousine" id="ingredients" type="text" class="validate noner"/>
+                  <button class="blackx" disabled style="align-self: flex-start">About recipe</button>
+                  <input placeholder="A Spicy Indian cousine" id="ingredients" type="text"
+                         class="validate noner"/>
 
-              <br/>
-              <br/>
-              <button class="grayx">
-                  Add +
-              </button>
+                  <br/>
+                  <br/>
+                  <button class="grayx" type="submit">
+                      Add +
+                  </button>
+              </form>
           </div>
       </div>
       <div class="panelList" >
           <!-- content -->
           <div class="container grey-text">
             <h5 class="center">Contact Us</h5>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, porro voluptatum illum veniam eaque sunt sit labore provident eligendi! Voluptate amet suscipit inventore unde maxime atque impedit officia nobis laboriosam!</p>
+            <p style="font-size: 18px">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, porro voluptatum illum veniam eaque sunt sit labore provident eligendi! Voluptate amet suscipit inventore unde maxime atque impedit officia nobis laboriosam!</p>
             <div class="divider"></div>
             <h6>Find us at:</h6>
-            <ul>
-              <li>123 Spicy Noodle Road</li>
-              <li>Yangon, Myanmar</li>
+            <ul style="font-size: 18px; font-family: 'Lato Light">
+              <li>171/5 Easter Rd, EH68LF</li>
+              <li>Edinburgh, United Kingdoms</li>
             </ul>
           </div>
       </div>
@@ -117,7 +119,7 @@
           <button class="blackx "><a href="./about.html">Annex Recipes</a></button>
 
           <hr/>
-          <button class="blackx ">Search Anything ...</button>
+          <button class="blackx ">🔎︎ Search Anything ...</button>
 
           <hr/>
           <button class="blackx ">
@@ -139,30 +141,80 @@
           </button>
           <hr/>
 
-          <button class="grayx" style="margin: 5px">
-              Vegetarian
-          </button>
-          <button class="grayx" style="margin: 5px">
-              Vegan
+          <button class="greenx shGreen" style="margin: 5px">
+          Vegetarian 🥦
+      </button>
+          <button class="greenX shGreen" style="margin: 5px">
+              Vegan 🥬
           </button>
           <br/>
-          <button class="grayx" style="margin: 5px">
-              Starter
+          <button class="bluex shBlue" style="margin: 5px">
+              Starter 🍞
           </button>
-          <button class="grayx" style="margin: 5px">
-              Deserts
+          <button class="themex shTheme" style="margin: 5px">
+              Deserts 🍰
           </button>
           <br/>
 
-          <button class="grayx" style="margin: 5px">
-              Mains
+          <button class="orangex shOrange" style="margin: 5px">
+              Mains 🍽️
           </button>
 
       </div>
-
+      <div class="mobile-nav">
+          <div style="display: flex; margin-top: 15px">
+              <button class="mobile-nav-item4">
+                  <a class="material-icons" href="/AnnexRecipe/public/index.html">
+                      home
+                  </a>
+              </button>
+              <button class="mobile-nav-item4">
+                  <a class="material-icons" href="./about.html">
+                      search
+                  </a>
+              </button>
+              <button class="mobile-nav-item4">
+                  <a class="material-icons"   style="color: #2070ee;
+                    font-size: 35px;
+                    ">
+                      mail
+                  </a>
+              </button>
+              <button class="mobile-nav-item4" >
+                  <a class="material-icons" href="./about.html">
+                      info
+                  </a>
+              </button>
+          </div>
+      </div>
   </article>
-  <script src="../js/App.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+  <script>
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+          apiKey: "AIzaSyCer5U-7CTMrxxPYkKeeujFU5dx1Uj1HKs",
+          authDomain: "annexcook.firebaseapp.com",
+          databaseURL: "https://annexcook.firebaseio.com",
+          projectId: "annexcook",
+          storageBucket: "annexcook.appspot.com",
+          messagingSenderId: "569533906797",
+          appId: "1:569533906797:web:990b4df117825a5e92a464",
+          measurementId: "G-VQG7761CJ9"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+      const db = firebase.firestore();
+      //CRUD
+
+  </script>
+  <script src="/public/App.js"></script>
+  <script src="../js/db.js"></script>
+  <script src="./js/controllers.js.js"></script>
   <script src="../js/ui.js"></script>
 </body>
 </html>
